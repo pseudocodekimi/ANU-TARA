@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>aNU Tara? | Find Your Ultimate Cravings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-section nav-left">
+      <a href="#home" class="nav-item active" id="navHome">Menu</a>
+      <a href="#reviews" class="nav-item" id="navReviews">Reviews</a>
+      <a href="#about" class="nav-item" id="navAbout">About</a>
+    </div>
+
+    <div class="nav-section nav-center">
+      <a href="#" class="logo">a<span class="text-blue">N</span><span class="text-yellow">U</span> Tara?</a>
+    </div>
+
+    <div class="nav-section nav-right" id="navAuthWrapper"></div>
+  </nav>
+
+  <div id="home-view-wrapper">
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            a<span class="text-blue">N</span>
+            <span class="text-yellow">U</span> TARA? LET'S FIND YOUR ULTIMATE <br>
+            CRAVINGS NEAR NATIONAL U!
+          </h1>
+
+          <div class="search-box">
+            <div class="search-input-wrapper">
+              <input type="text" id="searchInput" placeholder="Let's find what's suitable for your taste buds or wallet...">
+              <span class="search-filter-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cravings-section">
+      <div class="section-alignment-container">
+        <h2 class="moods-title">Moods</h2>
+
+        <div class="moods">
+          <button class="mood-btn" data-mood="Comfort Food">Comfort food</button>
+          <button class="mood-btn" data-mood="Quick Snack">Quick snack</button>
+          <button class="mood-btn" data-mood="Victory Treat">Victory treat</button>
+          <button class="mood-btn" data-mood="Chill Hangout">Chill hangout</button>
+          <button class="mood-btn" data-mood="Budget Meal">Budget meal</button>
+        </div>
+
+ <div class="card-container" id="all-foods">
+  <div class="card" data-store-id="dantes-chicken-house" 
+  data-name="Dante's Chicken House Quick Snack" data-price="89">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('dantes-chicken-house')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="dante.png" alt="Dante's Chicken House">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Dante's Chicken House</h3>
+                <span class="price-tag">₱89 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Dantes Chicken House','dante.png',
+              '4. / 5','521 F. Jhocson St. Sampaloc, Manila','Starts ₱89 - ₱250','Quick Treat','10:00 AM - 8:00 PM','Not Available','Not Available','Outdoor Dine-in','Not Available','https://www.facebook.com/profile.php?id=100063575139085','dm.png','dantes-chicken-house')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.8</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Quick Snack</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'dantes-chicken-house')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1. Kainan Zamura -->
+          <div class="card" data-store-id="kainan-zamura" data-name="Kainan Zamura victory treat" data-price="50">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('kainan-zamura')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="kain.png" alt="Kainan Zamura">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Kainan Zamura</h3>
+                <span class="price-tag">₱50 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Kainan Zamura','kain.png','4.5 / 5','1513 F. Jhocson St. Sampaloc, Manila','Starts ₱50 - ₱250','Victory Treat','12:00 PM - 8:00 PM','Not Available','Not Available','Outdoor Dine-in','Not Available','https://www.facebook.com/share/1D6zGbrpZb/?mibextid=wwXIfr','m4.png','kainan-zamura')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.5</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Victory Treat</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'kainan-zamura')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Koncrete Cafe -->
+          <div class="card" data-store-id="koncrete-cafe" data-name="Koncrete Cafe chill hangout" data-price="100">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('koncrete-cafe')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="konkrete.png" alt="Koncrete Cafe">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Koncrete Cafe</h3>
+                <span class="price-tag">₱100 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Koncrete Cafe','konkrete.png','4.0 / 5','1530 F. Jhocson Street Corner Lacson Sampaloc Manila','Starts ₱100 - ₱250','Chill Hangout','1:00 PM - 2:00 AM','Available','Available','Indoor & Outdoor Dine-in','Available','https://www.facebook.com/share/1RVa6B2iri/?mibextid=wwXIfr','konm.png','koncrete-cafe')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.0</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Chill Hangout</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'koncrete-cafe')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Kmukbang samgyupsal house -->
+          <div class="card" data-store-id="kmukbang-samgyupsal" data-name="Kmukbang samgyupsal house victory treat comfort food" data-price="199">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('kmukbang-samgyupsal')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="kmuk.png" alt="Kmukbang Samgyupsal House">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Kmukbang samgyupsal</h3>
+                <span class="price-tag">₱199 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Kmukbang samgyupsal house','kmuk.png','4.7 / 5','1481B F. Jhocson cor F. Cayco Streets Sampaloc','Starts ₱199 - ₱699','Victory Treat, Comfort Food','11:00 AM - 11:00 PM','Not Available','Not Available','Indoor Dine-in','Available','https://www.facebook.com/share/1L69sgdVu7/?mibextid=wwXIfr','m6.png','kmukbang-samgyupsal')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.7</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Comfort Food</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'kmukbang-samgyupsal')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Apu Atang -->
+          <div class="card" data-store-id="apu-atang" data-name="Apu Atang comfort food budget meal" data-price="50">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('apu-atang')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="r2.PNG" alt="Apu Atang">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Apu Atang</h3>
+                <span class="price-tag">₱59 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Apu Atang','r2.PNG','4.8 / 5','568 Cayco Street, Manila','Starts ₱50 - ₱250','Comfort Food, Budget Meal','9:00 AM - 8:00 PM','Not Available','Not Available','Indoor Dine-in','Not Available','https://www.facebook.com/share/1Q6UdUTPWB/?mibextid=wwXIfr','m2.jpg','apu-atang')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.8</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Budget Meal</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'apu-atang')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Lik’a Kape -->
+          <div class="card" data-store-id="lika-kape" data-name="Lik’a Kape chill hangout" data-price="150">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('lika-kape')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="la.png" alt="Lik’a Kape">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Lik’a Kape</h3>
+                <span class="price-tag">₱150 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Lik’a Kape','la.png','4.7 / 5','446 Cayco st. Sampaloc, Manila','Starts ₱150 - ₱250','Chill Hangout','11:00 AM - 11:00 PM','Available','Available','Indoor Dine-in','Available','https://www.facebook.com/share/18hYQ8x54K/?mibextid=wwXIfr','m5.png','lika-kape')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.7</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Chill Hangout</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'lika-kape')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Tiger Winx -->
+<div class="card"
+     data-store-id="tiger-winx"
+     data-name="Tiger Winx budget meal comfort food"
+     data-price="79">
+
+  <div class="card-img-wrapper">
+    <button class="save-store-bookmark-btn"
+            onclick="toggleSaveStore('tiger-winx')">
+      <svg class="bookmark-icon" viewBox="0 0 24 24">
+        <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+      </svg>
+    </button>
+
+    <img src="tw.png"
+         alt="Tiger Winx">
+  </div>
+
+  <div class="card-content">
+    <div class="card-header-row">
+      <h3>Tiger Winx</h3>
+      <span class="price-tag">₱79 up</span>
+    </div>
+
+    <button class="details-btn"
+            onclick="openModal(
+              'Tiger Winx',
+              'tw.png',
+              '5 / 5',
+              'P. Noval corner J. Barlin street',
+              'Starts ₱119',
+              'Comfort Food, Budget Meal',
+              '10:00 AM - 10:00 PM',
+              'Not Available',
+              'Available',
+              'Outdoor Dine-in',
+              'Available',
+              'https://www.facebook.com/tigerwinx2016',
+              'twm.jpg',
+              'tiger-winx'
+            )">
+      Check Details
+    </button>
+
+    <div class="rating-display">
+      <span class="star-icon">★</span> 5.0
+    </div>
+
+    <div class="tag-row">
+      <span class="tag location">Near NU</span>
+      <span class="tag mood">Budget Meal</span>
+    </div>
+
+    <button class="review-btn"
+            onclick="toggleReview(this)">
+      Rate & Review
+    </button>
+
+    <div class="review-box">
+      <div class="stars">
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+      </div>
+
+      <textarea placeholder="Write your feedback..."></textarea>
+
+      <button class="submit-review"
+              onclick="submitCardReview(this, 'tiger-winx')">
+        Submit Review
+      </button>
+    </div>
+  </div>
+
+</div>
+
+          <!-- 10. Cafe Saburo -->
+          <div class="card hidden-store" data-store-id="cafe-saburo" data-name="Cafe Saburo chill hangout" data-price="100">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('cafe-saburo')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="cs.png" alt="Cafe Saburo">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Cafe Saburo</h3>
+                <span class="price-tag">₱100 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Cafe Saburo','cs.png','4.5 / 5','406-H G Gerardo Tuazon St, Sampaloc, Manila','Price Available at Store','Chill Hangout','11:00 AM - 10:00 PM','Not Available','Not Available','Indoor Dine-in','Available','https://www.facebook.com/profile.php?id=100090507921515','csmen.png','cafe-saburo')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.5</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Chill Hangout</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'cafe-saburo')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+         <div class="card hidden-store"
+     data-store-id="crazy-curry"
+     data-name="Crazy Curry comfort food victory treat"
+     data-price="69">
+
+  <div class="card-img-wrapper">
+    <button class="save-store-bookmark-btn"
+            onclick="toggleSaveStore('crazy-curry')">
+      <svg class="bookmark-icon" viewBox="0 0 24 24">
+        <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+      </svg>
+    </button>
+
+    <img src="r1.jpg"
+         alt="Crazy Curry">
+  </div>
+
+  <div class="card-content">
+    <div class="card-header-row">
+      <h3>Crazy Curry</h3>
+      <span class="price-tag">₱69 up</span>
+    </div>
+
+    <button class="details-btn"
+            onclick="openModal(
+              'Crazy Curry',
+              'm1.jpg',
+              '4.7 / 5',
+              '2327 Legarda St, Sampaloc, Manila',
+              'Starts ₱69 - ₱1000',
+              'Comfort Food, Victory Treat',
+              '10:00 AM - 9:00 PM',
+              'Not Available',
+              'Not Available',
+              'Indoor Dine-in',
+              'Available',
+              'https://www.facebook.com/crazycurryph',
+              'm1.jpg',
+              'crazy-curry'
+            )">
+      Check Details
+    </button>
+
+    <div class="rating-display">
+      <span class="star-icon">★</span> 4.7
+    </div>
+
+    <div class="tag-row">
+      <span class="tag location">Near NU</span>
+      <span class="tag mood">Comfort Food</span>
+    </div>
+
+    <button class="review-btn"
+            onclick="toggleReview(this)">
+      Rate & Review
+    </button>
+
+    <div class="review-box">
+      <div class="stars">
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+        <span onclick="rateCardStar(this)">★</span>
+      </div>
+
+      <textarea placeholder="Write your feedback..."></textarea>
+
+      <button class="submit-review"
+              onclick="submitCardReview(this, 'crazy-curry')">
+        Submit Review
+      </button>
+    </div>
+  </div>
+
+</div>
+
+          <!-- 12. Share it Bistro -->
+          <div class="card hidden-store" data-store-id="inigo-street-food" data-name="Share it Bistro quick snack budget meal" data-price="30">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('inigo-street-food')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="share.png" alt="Share it Bistro">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>Share it Bistro</h3>
+                <span class="price-tag">₱30 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('Share it Bistro','share.png','4.3 / 5','M.F. Jhocson, Sampaloc, Manila','Starts ₱30','Quick Snack, Budget Meal','8:00 AM - 11:00 PM','Not Available','Available','Indoor and Outdoor Dine-in','Available','','menu1.png','inigo-street-food')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.3</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Budget Meal</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'inigo-street-food')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. KALDI Coffee NU -->
+          <div class="card hidden-store" data-store-id="kaldi-coffee" data-name="KALDI Coffee NU chill hangout" data-price="100">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('kaldi-coffee')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="image.png" alt="KALDI Coffee NU">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>KALDI Coffee NU</h3>
+                <span class="price-tag">₱160 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('KALDI Coffee NU','image.png','4.5 / 5','506 F Jhocson St, Sampaloc, Manila','Price Available at Store','Chill Hangout','11:00 AM - 12:00 AM','Not Available','Not Available','Indoor Dine-in','Available','https://web.facebook.com/profile.php?id=61571758983565','kaldim.png','kaldi-coffee')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 4.5</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Chill Hangout</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'kaldi-coffee')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15. PST Pastil sa Tabi -->
+          <div class="card hidden-store" data-store-id="pst-pastil-sa-tabi" data-name="PST Pastil sa Tabi quick food" data-price="25">
+            <div class="card-img-wrapper">
+              <button class="save-store-bookmark-btn" onclick="toggleSaveStore('pst-pastil-sa-tabi')">
+                <svg class="bookmark-icon" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              </button>
+              <img src="pastil.png" alt="PST Pastil sa Tabi">
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3>PST Pastil sa Tabi</h3>
+                <span class="price-tag">₱25 up</span>
+              </div>
+              <button class="details-btn" onclick="openModal('PST Pastil sa Tabi','pastil.png','5 / 5','2315 San Anton St, Sampaloc, Manila','Starts ₱25','Quick Food','7:00 AM - 11:00 PM','Not Available','Not Available','Indoor Dine-in','Not Available','https://www.facebook.com/PSTSampaloc','pstmenu.png','pst-pastil-sa-tabi')">
+                Check Details
+              </button>
+              <div class="rating-display"><span class="star-icon">★</span> 5.0</div>
+              <div class="tag-row">
+                <span class="tag location">Near NU</span>
+                <span class="tag mood">Budget Meal</span>
+              </div>
+              <button class="review-btn" onclick="toggleReview(this)">Rate & Review</button>
+              <div class="review-box">
+                <div class="stars">
+                  <span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span><span onclick="rateCardStar(this)">★</span>
+                </div>
+                <textarea placeholder="Write your feedback..."></textarea>
+                <button class="submit-review" onclick="submitCardReview(this, 'pst-pastil-sa-tabi')">Submit Review</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="show-buttons-after">
+          <button class="show-all-btn" id="showAllBtn">Show All Food Stores</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Standalone Reviews Feed View -->
+  <div id="reviews-standalone-view" class="view-pane-hidden">
+    <section class="section">
+      <div class="section-alignment-container">
+        <h2 class="section-title">Community Review Hub</h2>
+        <p class="section-subtitle">Real-time student food ratings and top performing locations around National University.</p>
+        
+        <div class="reviews-page-grid">
+          <div class="top-rated-ranking-box">
+            <h3>🏆 Top Rated Stores</h3>
+            <div class="leaderboard-item">
+              <span class="rank">1</span>
+              <div class="rank-details"><strong>Tiger Winx</strong> <small>Budget Meal Favorite</small></div>
+              <span class="score">⭐ 5.0</span>
+            </div>
+            <div class="leaderboard-item">
+              <span class="rank">2</span>
+              <div class="rank-details"><strong>Share it Bistro</strong> <small>Quick Snack & Budget Meal</small></div>
+              <span class="score">⭐ 4.3</span>
+            </div>
+            <div class="leaderboard-item">
+              <span class="rank">3</span>
+              <div class="rank-details"><strong>PST Pastil sa Tabi</strong> <small>Quick Food Favorite</small></div>
+              <span class="score">⭐ 5.0</span>
+            </div>
+          </div>
+
+          <div class="global-reviews-sidebar">
+            <h3>💬 All Recent Comments</h3>
+            <div id="globalReviewsFeed"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Account Setting View -->
+  <div id="account-portal-view" class="view-pane-hidden">
+    <section class="section">
+      <div class="section-alignment-container">
+        <h2 class="section-title">Account Settings & Overview</h2>
+        <p class="section-subtitle">Manage your personal profile identities, security keys, and saved store markers.</p>
+        
+        <div class="account-dashboard-grid">
+          <div class="account-card editor-card">
+            <h3>Personal Details Editor</h3>
+            <div class="edit-input-group">
+              <label>Display Name</label>
+              <input type="text" id="editDisplayName" placeholder="e.g. Juan Dela Cruz">
+            </div>
+            <div class="edit-input-group">
+              <label>Username Handle</label>
+              <input type="text" id="editUsername" placeholder="e.g. juan_dc">
+            </div>
+            <button class="save-profile-btn" onclick="saveProfileChanges()">Save Updated Settings</button>
+          </div>
+
+          <div class="account-card activity-card">
+            <div class="tabs-header">
+              <button class="tab-link active" onclick="switchAccountTab(event, 'saved-locations-tab')">Saved Stores</button>
+              <button class="tab-link" onclick="switchAccountTab(event, 'my-reviews-tab')">My Reviews</button>
+            </div>
+            
+            <div id="saved-locations-tab" class="account-tab-content active-tab">
+              <div class="dashboard-listing-grid" id="dashboardSavedContainer"></div>
+            </div>
+            
+            <div id="my-reviews-tab" class="account-tab-content">
+              <div class="dashboard-listing-grid" id="dashboardReviewsContainer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <h2 class="about-logo">About a<span class="text-blue">N</span><span class="text-yellow">U</span> Tara?</h2>
+      <p>“aNU TARA?” is a web-based food discovery and recommendation system designed explicitly for students of National University - Manila. The concept originated directly from a common point of frustration experienced within our community: when friends frequently ask each other, "Saan Tayo Kakain?" during short class break windows.</p>
+      <p>With limited time, varying budgets, and differing food preferences, turning routine choices into decisions can be tough. By aggregating student-generated reviews, ratings, and active mood filters, we clear the path to the best localized dining options surrounding the campus.</p>
+
+      <div class="feedback-portal-wrapper" style="margin-top: 2.5rem; text-align: left; background: #ffffff; padding: 2rem; border-radius: 12px; border: 1px solid #eee;">
+        <h3 style="color: #443A35; margin-bottom: 0.5rem; font-size: 1.25rem;">📍 Suggest a Food Spot / Give Feedback</h3>
+        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1.2rem;">Discovered a new hidden carinderia, kiosk, or study cafe around Sampaloc? Send us your suggestions below.</p>
+        <form id="feedbackForm" onsubmit="submitAdminFeedback(event)">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <input type="text" id="feedbackPlaceName" placeholder="Name of Food Spot or Subject Topic" style="width:100%; padding: 0.7rem; border: 1px solid #ddd; border-radius:6px;" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <textarea id="feedbackText" rows="3" placeholder="Share your recommendations, location tips, or website feedback here..." style="width:100%; padding: 0.7rem; border: 1px solid #ddd; border-radius:6px; font-family:inherit;" required></textarea>
+          </div>
+          <button type="submit" style="background:#443A35; color:#fff; padding:0.6rem 1.5rem; border:none; border-radius:6px; font-weight:600; cursor:pointer;">Submit Feedback</button>
+        </form>
+        <div id="feedbackStatus" style="margin-top:0.8rem; font-size:0.9rem; font-weight:600;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Detail Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close-x" onclick="closeModal()">✕</button>
+      <img id="modalImage" src="" alt="Store preview">
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <div class="rating" id="modalRating"></div>
+        
+        <p style="margin-bottom: 6px;">📍 <strong>Location:</strong> <span id="modalLocation"></span></p>
+        <p style="margin-bottom: 6px;">💰 <strong>Budget:</strong> <span id="modalBudget"></span></p>
+        <p style="margin-bottom: 6px;">✨ <strong>Vibe/Mood:</strong> <span id="modalMood"></span></p>
+        <p style="margin-bottom: 14px;">🕒 <strong>Opening Time:</strong> <span id="modalOpening"></span></p>
+        
+        <hr style="margin: 16px 0; border: 0; border-top: 1px solid #eee;">
+
+        <h3 style="margin-bottom: 12px; font-size: 1.1rem;">Store Amenities & Details</h3>
+        <div class="amenities-grid">
+          <div class="info-box">📶 WiFi: <span id="modalWifi"></span></div>
+          <div class="info-box">🔌 Sockets: <span id="modalSockets"></span></div>
+          <div class="info-box">🪑 Dine-in: <span id="modalDineIn"></span></div>
+          <div class="info-box">❄️ AC: <span id="modalAC"></span></div>
+        </div>
+
+        <div style="margin: 18px 0;">
+          🔗 <strong>Website/Page:</strong> 
+          <a id="modalLink" href="#" target="_blank" style="color: #6da9c6; font-weight: 600; text-decoration: underline;">Visit Facebook Page</a>
+        </div>
+
+        <h3 class="menu-title">Menu Preview</h3>
+        <img id="modalMenu" class="menu-image" src="" alt="Menu preview">
+
+        <hr style="margin: 24px 0; border: 0; border-top: 1px solid #eee;">
+
+        <h3 style="margin-bottom: 14px; font-size: 1.2rem; color: #443A35;">Submitted Reviews & Comments</h3>
+        <div id="modalCommentsContainer" class="comments-stream-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentication Modal -->
+  <div class="modal" id="authModal">
+    <div class="auth-modal-content">
+      <button class="modal-close-x" onclick="closeAuthModal()">✕</button>
+      <div class="auth-left">
+        <div class="auth-logo">a<span class="text-blue">N</span><span class="text-yellow">U</span> Tara?</div>
+        <h2 id="authTitle">Sign In</h2>
+        <p id="authText">Welcome back to aNU Tara.</p>
+      </div>
+      
+      <form class="auth-right">
+        <label>Email</label>
+        <input type="email" id="authEmailField" 
+        placeholder="Enter Email Address" required>
+       
+        <div class="edit-input-group" id="authUsernameGroup" style="display: none;">
+          <label>Username</label>
+          <input type="text" id="authUsernameField" placeholder="Choose a username" required>
+        </div>
+        
+        <label>Password</label>
+        
+        <div class="password-wrapper">
+          <input type="password" id="authPasswordField" 
+          placeholder="Enter Password" required>
+
+           <i class="far fa-eye password-toggle" id="togglePassword"></i>
+          </div>
+
+        <div class="edit-input-group" id="authConfirmPasswordGroup" style="display: none;">
+          <label>Confirm Password</label>
+          <input type="password" id="authConfirmPasswordField" placeholder="Confirm Password" required>
+        </div>
+
+          <p id="authErrorMessage" class="auth-error-message"></p>
+
+        <button type="submit" id="authButton">Log In</button>
+        <div class="auth-divider">Or</div>
+        <button type="button" class="google-btn" onclick="handleAuthSubmission()">Continue with Google</button>
+        
+        <div class="switch-auth">
+          <span id="switchMessage">Don't have an account?</span>
+          <button type="button" id="switchAuth">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <h2>a<span class="text-blue">N</span><span class="text-yellow">U</span> Tara?</h2>
+    <p>Find food. Share reviews. Discover cravings.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
